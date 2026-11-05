@@ -1,0 +1,20 @@
+# Routing rules for Grok Bots. Hot-reloadable.
+# Grok is default everywhere. Shadow mode only in this PR - no live backend changes.
+
+default: grok
+
+bots:
+  "Ava Renner":
+    primary: grok  # Needs frontier reasoning
+    shadow_mode: true
+    promoted_to_local: false
+  "Julian Crowe":
+    primary: grok  # Architecture reviews - will promote later for repo-specific depth
+    shadow_mode: true
+    promoted_to_local: false
+  "Marcus Hale":
+    primary: grok  # 3C language trained on warranty corpus
+    shadow_mode: true
+    promoted_to_local: false
+  # Add other bots as needed: Theo Park, Rowan Blake, etc.
+  # Default to Grok, enable shadow for validation
