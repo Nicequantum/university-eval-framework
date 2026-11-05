@@ -1,0 +1,40 @@
+# Routing rules for Grok Bots
+# Hot-reloadable YAML
+# Default: all to grok
+
+default_backend: grok
+
+bots:
+  Ava Renner:
+    program_lead:
+      backend: grok
+      reason: frontier reasoning required
+    shadow_mode: false
+    promotion_flag: false  # set to true to prefer local with grok fallback
+  Theo Park:
+    token_minter:
+      backend: grok
+    shadow_mode: false
+    promotion_flag: false
+  Julian Crowe:
+    architecture_reviews:
+      backend: local
+      reason: repo-specific depth
+    shadow_mode: true  # example: shadow for validation
+    promotion_flag: false
+  Marcus Hale:
+    3c_language:
+      backend: local
+      reason: trained on warranty corpus
+    shadow_mode: false
+    promotion_flag: false
+  Rowan Blake:
+    security:
+      backend: grok
+    shadow_mode: false
+    promotion_flag: false
+  # Add more bots as needed
+  # Keiko Tanaka, Priya Shah, etc. default to grok
+
+# Task-level overrides can be added under tasks:
+tasks: {}
